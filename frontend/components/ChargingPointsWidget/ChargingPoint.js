@@ -15,7 +15,7 @@ function ChargingPoint({ id, amps, occupied, fastCharging, connect, disconnect }
                 {occupied && (
                     <Fragment>
                         <div className="amps">{amps}A</div>
-                        <div className="charging-type">{fastCharging ? 'fast' : 'slow'}</div>
+                        <div className="charging-type">{fastCharging ? 'Fast' : 'Slow'}</div>
                     </Fragment>
                 )}
                 {occupied ? (
