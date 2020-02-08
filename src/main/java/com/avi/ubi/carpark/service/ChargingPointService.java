@@ -50,9 +50,7 @@ public class ChargingPointService {
 
         int position = 0;
         int fastChargingSlots = CarparkUtils.getFastChargingSlots(sortedByOccupied.size(), totalAmp, fastChargingAmp, slowChargingAmp);
-        System.out.println(fastChargingSlots);
         for (ChargingPoint chargingPoint : sortedByOccupied) {
-            System.out.println("  " + chargingPoint.getId());
             chargingPoint.setAmps(position < fastChargingSlots ? fastChargingAmp : slowChargingAmp);
             position++;
         }

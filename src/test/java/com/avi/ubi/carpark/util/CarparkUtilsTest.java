@@ -1,6 +1,5 @@
-package com.avi.ubi.carpark.test;
+package com.avi.ubi.carpark.util;
 
-import com.avi.ubi.carpark.util.CarparkUtils;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import static org.junit.Assert.*;

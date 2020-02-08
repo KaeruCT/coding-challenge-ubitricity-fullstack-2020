@@ -16,7 +16,6 @@ import static org.springframework.web.bind.annotation.RequestMethod.GET;
 @CrossOrigin(origins = "*", maxAge = 3600)
 @RestController
 @RequestMapping(("/chargingPoints"))
-
 public class ChargingPointController {
     @Autowired private ChargingPointService chargingPointService;
 
@@ -46,10 +45,10 @@ public class ChargingPointController {
     @RequestMapping(method = GET)
     public List<ChargingPointResponse> getChargingPoints() {
         return chargingPointService.getChargingPoints()
-                .values()
-                .stream()
-                .map(this::toResponse)
-                .collect(Collectors.toList());
+            .values()
+            .stream()
+            .map(this::toResponse)
+            .collect(Collectors.toList());
     }
 
     private ChargingPointResponse toResponse(ChargingPoint chargingPoint) {
