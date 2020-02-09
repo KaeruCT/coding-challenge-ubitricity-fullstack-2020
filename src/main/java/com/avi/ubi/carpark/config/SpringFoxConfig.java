@@ -1,5 +1,6 @@
 package com.avi.ubi.carpark.config;
 
+import com.google.common.base.Predicates;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import springfox.documentation.builders.PathSelectors;
@@ -15,8 +16,7 @@ public class SpringFoxConfig {
     public Docket api() {
         return new Docket(DocumentationType.SWAGGER_2)
             .select()
-            .apis(RequestHandlerSelectors.any())
-            .paths(PathSelectors.any())
+            .apis(RequestHandlerSelectors.basePackage("com.avi.ubi.carpark"))
             .build();
     }
 }

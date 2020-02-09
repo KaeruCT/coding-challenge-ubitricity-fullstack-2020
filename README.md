@@ -18,11 +18,15 @@ If necessary, you can get a jar for distribution by running:
 mvn package
 ```
 
-The resulting jar will be at `target/recruiting-1.0.jar` and it can be run by doing this:
+The resulting jar will be at `target/ubi.carpark-0.0.1-SNAPSHOT.jar` and it can be run by doing this:
 
 ```
-java -jar target/recruiting-1.0.jar
+java -jar target/ubi.carpark-0.0.1-SNAPSHOT.jar
 ```
+
+When the application is up and running, the documentation can be seen at: http://localhost:8080/swagger-ui.html
+
+You can also see a static HTML documentation in the `api-docs.html` file in the root of this project. This was generated using this tool: https://bootprint.knappi.org/
 
 ### Tests
 
@@ -47,12 +51,25 @@ I used the basic structure I usually use for Spring Boot projects:
 
 # Frontend
 
+I decided to build the frontend using https://nextjs.org/ (a React framework).
+
+The configuration for the frontend is in the `next.config.js` file.
+So far this file only contains the base URL for the backend api. 
+
 ## How to build & run
 
 Go inside the `frontend` directory and run these commands:
 ```
 npm install
 npm run build
+```
+
+This will generate a static build in the `out` directory.
+This can be copied on any web server to run the frontend app.
+
+You can also run the app in dev mode:
+```
+npm run dev
 ```
 
 ## Test
