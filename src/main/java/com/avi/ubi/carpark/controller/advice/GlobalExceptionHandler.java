@@ -1,6 +1,5 @@
 package com.avi.ubi.carpark.controller.advice;
 import com.avi.ubi.carpark.exceptions.ServiceException;
-import io.swagger.annotations.Api;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.ResponseEntity;

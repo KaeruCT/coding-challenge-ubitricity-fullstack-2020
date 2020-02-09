@@ -30,7 +30,13 @@ You can also see a static HTML documentation in the `api-docs.html` file in the 
 
 ### Tests
 
-To run only the tests:
+There's 3 tests:
+
+ * ChargingPointControllerIntegrationTest - integration test of the rest controller
+ * ChargingPointServiceTest - unit test of the business logic service
+ * CarparkUtilsTest - simple test of static utility methods
+
+To run them you can also use mvn:
 
 ```
 mvn test
@@ -51,6 +57,8 @@ I used the basic structure I usually use for Spring Boot projects:
 
 # Frontend
 
+The code for the frontend app is inside the `frontend` directory.
+
 I decided to build the frontend using https://nextjs.org/ (a React framework).
 
 The configuration for the frontend is in the `next.config.js` file.
@@ -65,7 +73,7 @@ npm run build
 ```
 
 This will generate a static build in the `out` directory.
-This can be copied on any web server to run the frontend app.
+The contents of this directory can be copied on any web server to run the frontend app.
 
 You can also run the app in dev mode:
 ```
@@ -73,6 +81,9 @@ npm run dev
 ```
 
 ## Test
+
+There is only one frontend test: `ChargingPoint.test.js` - which
+focuses on testing the widget used to represent a charging point.
 
 To run the frontend tests simply run
 ```
@@ -82,10 +93,13 @@ npm test
 # Ideas & Considerations
 
 * There is no data persistence, but it could be added using Spring Data & the database of your choice.
-* Error handling could be improved both in the backend and the frontend.
+* Error handling could be improved both in the backend and the frontend. Right now there's simply some log error calls on the server side.
 * There's no monitoring of any kind. Logging can also be improved.
+* We can add SSR for the frontend, but it will require running a node server, so the frontend deployment becomes slightly more complicated.
+
 
 Original README continues below:
+
 
 ## Description:
 The task is to implement a simple (frontend & backend) application to manage the charging points installed at Carpark Ubi.

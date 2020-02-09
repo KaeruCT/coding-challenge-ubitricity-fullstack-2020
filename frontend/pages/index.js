@@ -77,11 +77,11 @@ export default function Index({ chargingPoints }) {
                 body {
                     margin: 0;
                     padding: 0;
-                    background: #124;
-                    background: linear-gradient(#124 0%, #2b3b59 100%);
                     color: #eee;
                     height: 100%;
                     font-family: sans-serif;
+                    background: #124;
+                    background: linear-gradient(#124 0%, #2b3b59 100%) fixed;
                 }
                 * {
                     box-sizing: border-box;
